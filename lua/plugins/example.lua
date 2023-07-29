@@ -10,6 +10,7 @@ if true then return {} end
 -- * override the configuration of LazyVim plugins
 return {
   { "folke/tokyonight.nvim" },
+  { "AndrewRadev/splitjoin.vim" },
 
   {
     "LazyVim/LazyVim",

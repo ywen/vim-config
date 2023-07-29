@@ -9,4 +9,13 @@ vim.api.nvim_set_keymap("n", "fb", ":b#<CR>", { noremap = true })
 vim.keymap.set("n", "<leader>v", "<C-w>v<C-w>l")
 vim.keymap.set("n", "<leader>w", "<C-w>s<C-w>l")
 vim.keymap.set("n", "<C-b>", "<ESC>:BufOnly<cr>")
-vim.keymap.set("n", "<C-l>", "<ESC>:buffer ")
+
+vim.cmd([[
+set clipboard=unnamed
+set number
+set autowriteall
+set gdefault
+set directory=~/.config/nvim/swp
+autocmd BufLeave,FocusLost * wall
+command BufOnly silent! execute "%bd|e#|bd#"
+]])
