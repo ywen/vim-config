@@ -1,3 +1,3 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
-vim.g.mapleader = ","
+vim.env.CC = ""
 require("config.lazy")

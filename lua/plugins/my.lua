@@ -9,10 +9,11 @@ return {
   { "gremble0/yellowbeans.nvim" },
   { "AndrewRadev/splitjoin.vim" },
   { "xiantang/darcula-dark.nvim" },
+  { "tomtom/tcomment_vim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "darcula-dark",
+      colorscheme = "tokyonight",
     },
   },
   {
