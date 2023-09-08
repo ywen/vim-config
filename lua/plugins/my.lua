@@ -13,7 +13,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "yellowbeans",
     },
   },
   {
@@ -24,4 +24,23 @@ return {
     },
     keys = { { "<C-l>", "<cmd>LazyGit<cr>", desc = "LazyGit" } },
   },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {}, -- this is equalent to setup({}) function
+  },
+  require("telescope").setup({
+    defaults = {
+      vimgrep_arguments = {
+        "rg",
+        "--color=never",
+        "--no-heading",
+        "--with-filename",
+        "--line-number",
+        "--column",
+        "--smart-case",
+        "-u", -- thats the new thing
+      },
+    },
+  }),
 }

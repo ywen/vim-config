@@ -18,4 +18,14 @@ set gdefault
 set directory=~/.config/nvim/swp
 autocmd BufLeave,FocusLost * wall
 command BufOnly silent! execute "%bd|e#|bd#"
+let g:test#strategy = 'vimux'
+let g:rspec_command = "bundle exec rspec"
+let test#ruby#cucumber#executable = "bundle exec spinach"
+let test#ruby#cucumber#options= '-b'
+let test#javascript#mocha#executable = 'yarn test --reporter dot'
 ]])
+
+vim.keymap.set("n", "<leader>t", ":TestFile<CR>")
+vim.keymap.set("n", "<leader>s", ":TestNearest<CR>")
+vim.keymap.set("n", "<leader>l", ":TestLast<CR>")
+vim.keymap.set("n", "<leader>g", ":TestVisit<CR>")
