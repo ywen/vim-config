@@ -25,6 +25,7 @@ let test#ruby#cucumber#options= '-b'
 let test#javascript#mocha#executable = 'yarn test --reporter dot'
 ]])
 
+vim.keymap.set("n", "<leader>bo", "<cmd>BufOnly<cr>")
 vim.keymap.set("n", "<leader>t", ":TestFile<CR>")
 vim.keymap.set("n", "<leader>s", ":TestNearest<CR>")
 vim.keymap.set("n", "<leader>l", ":TestLast<CR>")

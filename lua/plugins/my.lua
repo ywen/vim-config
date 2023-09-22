@@ -32,14 +32,14 @@ return {
   require("telescope").setup({
     defaults = {
       vimgrep_arguments = {
-        "rg",
-        "--color=never",
-        "--no-heading",
-        "--with-filename",
-        "--line-number",
+        "ag",
+        "--nocolor",
+        "--noheading",
+        "--numbers",
         "--column",
         "--smart-case",
-        "-u", -- thats the new thing
+        "--silent",
+        "--vimgrep",
       },
     },
   }),
