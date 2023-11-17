@@ -30,3 +30,10 @@ vim.keymap.set("n", "<leader>t", ":TestFile<CR>")
 vim.keymap.set("n", "<leader>s", ":TestNearest<CR>")
 vim.keymap.set("n", "<leader>l", ":TestLast<CR>")
 vim.keymap.set("n", "<leader>g", ":TestVisit<CR>")
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<Leader>swi",
+  '<cmd>lua require("plugins.switch_case").switch()<CR>',
+  { noremap = true, silent = true }
+)
