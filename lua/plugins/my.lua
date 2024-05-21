@@ -5,7 +5,16 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  { "folke/tokyonight.nvim" },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
   { "gremble0/yellowbeans.nvim" },
   { "AndrewRadev/splitjoin.vim" },
   { "xiantang/darcula-dark.nvim" },
@@ -13,7 +22,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "yellowbeans",
+      colorscheme = "tokyonight",
     },
   },
   {
