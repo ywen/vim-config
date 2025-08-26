@@ -15,6 +15,7 @@ return {
       },
     },
   },
+  { "miikanissi/modus-themes.nvim"},
   { "gremble0/yellowbeans.nvim" },
   { "AndrewRadev/splitjoin.vim" },
   { "xiantang/darcula-dark.nvim" },
